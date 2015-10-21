@@ -1,4 +1,4 @@
-Tech challenge for CrowdCompass
+# Tech Challenge for CrowdCompass
 
 * Summarize how you would approach test casing for the CrowdCompass website to ensure coverage:http://crowdcompass.com
 * Take a feature on the website and create a test spec. Include technical details.
