@@ -1,5 +1,4 @@
 require 'watir-webdriver'
-include Watir::Webdriver
 require 'minitest'
 require 'minitest/assertions'
 

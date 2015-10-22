@@ -6,7 +6,7 @@ class HomePage < BrowserContainer
     self
   end
 
-  def loaded?
-    @browser.div(:id => 'home').exists?
+  def footer_present?
+    @browser.div(:id => 'footer').exists?
   end
 end
