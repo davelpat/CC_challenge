@@ -7,7 +7,7 @@ The general approach will be to automate as much as possible during the itereati
 
 Testing will be done in a virtual machine to isolate the site from any development or staging environments.
 
-Functional, integration, and acceptance testing will use Behavioral Driven Development to specify the tests and to ensure apprporiate coverage as determined by the Product Owner and the delivery team.
+Functional, integration, and acceptance testing will use Behavioral Driven Development to specify the tests and to ensure apprporiate coverage as determined by the Product Owner and the delivery team. Point tools will be used to automate specific aspects of testing, such as load and performance testing or link checking.
 
 Test Driven Development is strongly encouraged for unit tests.
 
@@ -26,9 +26,11 @@ Test Driven Development is strongly encouraged for unit tests.
   Test that sticky navbar remains visible while scrolling and takes the user to the correct section of the page.
   
 3. **Cookies and Beacons**
+  + cookies not allowed
+  + cookies deleted during visit
+  + cookies deleted between visits
   
-
-5. **Forms**  
+4. **Forms**  
   Forms will be tested for  
     + correct data for required fields
     + required fields will indicate they are required
@@ -41,31 +43,40 @@ Test Driven Development is strongly encouraged for unit tests.
     + text fields over max allowed length will either be trucated or report an error message, as specified by the Product Owner or UX
     + date fields will allow valid dates, including leap years
     + invalid dates will display an appropriate error message
-    + Numeric fields?
+    + Numeric
     + check boxes will enable or disable actions depending on whether they are checked or not
     + if a checkbox is required for an action and it is not checked when the action is initiated, an appropriate error message will be displayed
     + controls become active when minimum required data is available and either not active until then or an appropriate error message is displayed to the user
 
-5. **Look & Feel**  
+5. **Dynamic Content**
+  + flash works properly
+  + movies work properly
+
+6. **Look & Feel**  
   The web site will be available to UX for look and feel validation during the iteration as the features are implemented.  
 
 ### Performance
 Performance tests will be run on actual hardware, not virtual machines.
 
 1. **Respoonse Times**  
-  Benchmark navigation actions on demand to ensure minimal response time as specified by the Product Owner.
+  Benchmark navigation actions on demand to ensure minimal response time as specified by the Product Owner. Response time should not deteriorate with new builds.
 
-2. **Load**  
-  A small subset of Navigation tests representing typical user actions will be selected to verify the web site will hold up under the specified load for the specified duration. A load runner, such as jrunner or something equivalent will be used to drive the tests.
+2. **Performance**
 
-3. **Stress**  
+3. **Load**  
+  A small subset of Navigation tests representing typical user actions will be selected to verify the web site will hold up under the specified load for the specified duration. A load runner, such as jrunner. jmeter, or something equivalent will be used to drive the tests.
+
+4. **Stress**  
   The same load runner will be used to 
 
-4. **Long haul tests**
+5. **Long haul tests**
   A VM will be set up to run a subset of user flow tests continuously, at a reasonable rate, and logs monitored for any errors that occur. The tests will continue to run until a crash occurs. Errors will be reported.
+
+### Database Tests
 
 ### Security
 1. Ensure links do not have sensitive data in clear text
+2. SQL injection tests
 
 ### Usability
 
