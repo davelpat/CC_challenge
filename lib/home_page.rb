@@ -5,4 +5,8 @@ class HomePage < BrowserContainer
     @browser.goto URL
     self
   end
+
+  def loaded?
+    @browser.div(:id => 'home').exists?
+  end
 end

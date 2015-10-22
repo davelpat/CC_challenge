@@ -1,5 +1,9 @@
 require 'watir-webdriver'
+include Watir::Webdriver
+require 'minitest'
+require 'minitest/assertions'
 
+# Build the path to the project class library file
 def lib_file(lib_fn)
   File.join(File.dirname(__FILE__), '..', '..', 'lib', lib_fn)
 end
@@ -34,4 +38,4 @@ module SiteHelper
   end
 end
 
-World(SiteHelper)
+World(SiteHelper, Minitest::Assertions)
