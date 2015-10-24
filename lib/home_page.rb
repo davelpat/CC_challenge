@@ -1,4 +1,4 @@
-class HomePage < BrowserContainer
+class HomePage < CcSite
   URL = 'http://www.crowdcompass.com'
 
   def open
@@ -6,7 +6,11 @@ class HomePage < BrowserContainer
     self
   end
 
+  def loaded?
+    self.id_found? 'home'
+  end
+
   def footer_present?
-    @browser.div(:id => 'footer').exists?
+    self.id_found? 'footer'
   end
 end

@@ -8,6 +8,7 @@ def lib_file(lib_fn)
 end
 require lib_file('cc_site')
 require lib_file('home_page')
+require lib_file('cc_footer')
 #require lib_file('feature_page')
 
 
