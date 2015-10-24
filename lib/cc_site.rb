@@ -12,6 +12,12 @@ class BrowserPage
     # maps link label to page body id tag
     page_id_map = {
         'Features' => 'features',
+        'Resources' => 'resources',
+        'Clients' => 'clients',
+        'CrowdCompass UK' => 'home',
+        'About Us' => 'about',
+        'Newsroom' => 'news',
+        'Demo our Solutions' => 'custom-demo',
     }
 
     page_id_map[target_page]
