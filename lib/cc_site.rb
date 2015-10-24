@@ -8,7 +8,13 @@ class BrowserPage
   end
 
   def map_to_page_id(target_page)
-    target_page.downcase
+
+    # maps link label to page body id tag
+    page_id_map = {
+        'Features' => 'features',
+    }
+
+    page_id_map[target_page]
   end
 
   def id_found?(id_name)

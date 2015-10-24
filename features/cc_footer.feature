@@ -6,5 +6,5 @@ Feature: Common footer for contact info and navigation
     Then the <target page> page is displayed
 
     Examples:
-    | target page |
-    | Features    |
+      | target page        |
+      | Features           |
