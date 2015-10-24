@@ -11,4 +11,5 @@ end
 
 Then(/^the (#{CAPTURE_PAGE_NAME}) page is displayed$/) do |target_page|
   assert_equal site.map_to_page_id(target_page), @current_page.page_id, "#{target_page} page not displayed"
+  @current_page.close
 end
