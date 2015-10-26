@@ -31,7 +31,7 @@ end
 BROWSER ||= set_constant_from_env('BROWSER', :firefox)
 
 # The site is slow; up the timeout to let it load
-BROWSER_TIMEOUT ||= set_constant_from_env('BROWSER_TIMEOUT', 90)
+BROWSER_TIMEOUT ||= set_constant_from_env('BROWSER_TIMEOUT', 90).to_i
 Watir.default_timeout = BROWSER_TIMEOUT
 
 module SiteHelper
