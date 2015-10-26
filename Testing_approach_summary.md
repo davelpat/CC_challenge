@@ -3,11 +3,11 @@
 
 ## General Overview
 
-The general approach will be to automate as much as possible during the itereation to support the product work being done in the iteration. Where it is not feasible or worthwhile automating, iteration work will be manually tested. Open source test tools will be investigated to support the test automation where tools have not already been deployed. The testing of the iteration work is the responsibility of the whole delivery team.
+The general approach will be to automate as much as possible during the iteration to support the product work being done in the iteration. Where it is not feasible or worthwhile automating, iteration work will be manually tested. Test cases will be written in Gherkin to facilitate automation when there is time. Open source test tools will be investigated to support the test automation where tools have not already been deployed. The testing of the iteration work is the responsibility of the whole delivery team.
 
 Testing will be done in a virtual machine to isolate the site from any development or staging environments.
 
-Functional, integration, and acceptance testing will use Behavioral Driven Development to specify the tests and to ensure apprporiate coverage as determined by the Product Owner and the delivery team. Point tools will be used to automate specific aspects of testing, such as load and performance testing or link checking.
+Functional, integration, and acceptance testing will use Behavioral Driven Development to specify the tests and to ensure appropriate coverage as determined by the Product Owner and the delivery team. Point tools will be used to automate specific aspects of testing, such as load and performance testing or link checking.
 
 Test Driven Development is strongly encouraged for unit tests.
 
@@ -40,7 +40,7 @@ Test Driven Development is strongly encouraged for unit tests.
     + invalid formats have reasonable error messages  
     + text fields will allow accented characters and special characters as appropriate for the field
     + test text fields with empty strings, max allowed length
-    + text fields over max allowed length will either be trucated or report an error message, as specified by the Product Owner or UX
+    + text fields over max allowed length will either be truncated or report an error message, as specified by the Product Owner or UX
     + date fields will allow valid dates, including leap years
     + invalid dates will display an appropriate error message
     + Numeric
@@ -58,7 +58,7 @@ Test Driven Development is strongly encouraged for unit tests.
 ### Performance
 Performance tests will be run on actual hardware, not virtual machines.
 
-1. **Respoonse Times**  
+1. **Response Times**  
   Benchmark navigation actions on demand to ensure minimal response time as specified by the Product Owner. Response time should not deteriorate with new builds.
 
 2. **Performance**
